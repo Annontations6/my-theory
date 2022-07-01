@@ -48,7 +48,14 @@ var init = () => {
     /////////////////
     //// Achievements
     let achievement_category1 = theory.createAchievementCategory(0, "Time")
+    let achievement_category2 = theory.createAchievementCategory(1, "Currency 1")
     achievement1 = theory.createAchievement(0, achievement_category1, "You Played!", "i think now.", () => true);
+
+    achievement2 = theory.createAchievement(1, achievement_category2, "Thousand?", "reach 1000 rho.", () => currency.value > 1000);
+    achievement3 = theory.createAchievement(2, achievement_category2, "Mega Rho", "reach 1e6 rho.", () => currency.value > 1e6);
+    achievement4 = theory.createAchievement(3, achievement_category2, "Nice", "reach 1e10 rho.", () => currency.value > 1e10);
+    achievement5 = theory.createAchievement(4, achievement_category2, "The End", "reach 1e20 rho and finsh to my theory.", () => currency.value > 1e20);
+    achievement6 = theory.createAchievement(5, achievement_category2, "Possible?", "reach 1e35 rho and mega finsh to my theory.", () => currency.value > 1e35);
 
     ///////////////////
     //// Story chapters
